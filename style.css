@@ -162,6 +162,7 @@ body {
 .box__elem_1 {
     margin-left: 560px;
     margin-top: 14px;
+    display: flex;
 }
 
 .box__elem_1 img {
@@ -181,70 +182,56 @@ body {
     margin-left: 10px;
 }
 
-.box__elem_2_text {
+.box__box-1__elem_text {
     vertical-align: middle;
     display: inline-block;
-    width: 28.2rem;
-    height: 5.7rem;
     color: #0d319c;
     font-family: Lato;
     font-size: 4rem;
     font-weight: 400;
     letter-spacing: 0.17px;
-    left: -48px;
-    top: -28px;
 }
 
-.box__elem_3_text {
-    vertical-align: middle;
-    display: inline-block;
-    width: 28.2rem;
-    height: 5.7rem;
-    color: #0d319c;
-    font-family: Lato;
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 0.17px;
-    left: -100px;
-    top: -28px;
-}
-
-.box__elem_4_text {
-    vertical-align: middle;
-    display: inline-block;
-    width: 28.2rem;
-    height: 5.7rem;
-    color: #0d319c;
-    font-family: Lato;
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 0.17px;
-    left: -33px;
-    top: -30px;
-}
+.box__box-1__elem_text.hba1c_target {
+    line-height: 10rem;
 }
 
 .box_text_extra {
     position: relative;
 }
 
-.box_text_extra>*, .box__elem_2_text, .box__elem_3_text,.box__elem_4_text  {
+.box__text_1 {
     position: absolute;
+    left: 560px;
+    top: 13px;
 }
 
 .box__text_2 {
-    margin-left: 274px;
-    margin-top: 112px;
+    position: absolute;
+    left: 226px;
+    top: 155px;
 }
 
 .box__text_3 {
-    margin-left: 479px;
-    margin-top: 222px;
+    position: absolute;
+    left: 382px;
+    top: 266px;
 }
 
 .box__text_4 {
-    margin-left: 822px;
-    margin-top: 201px;
+    position: absolute;
+    left: 789px;
+    top: 250px;
+}
+
+.box__elem_container_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.box__elem_container_flex.hba1c_target {
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -1056,7 +1043,7 @@ body {
 .orange_backlight_scroll_down {
     width: 600px;
     height: 0.5px;
-    box-shadow: 0 -16px 30px 41px rgba(247, 139, 31, 1);
+    box-shadow: 0 -16px 30px 24px rgba(247, 139, 31, 1);
     background-color: #f78b1f;
     border-radius: 50%;
     margin-top: 27px;
@@ -1064,4 +1051,72 @@ body {
 
 .first .scroll_down {
     display: none;
+}
+
+.icon_pulse {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+@keyframes station__pulse {
+    0% {
+        transform: scale(0);
+        background: #f2800f;
+        opacity: 1;
+        border: 1px solid #f2800f;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.4;
+        background: #f2800f5c;
+        border: 1px solid #f93b00;
+    }
+}
+
+.box_HbA1c_target_animation_container {
+    position: relative;
+    width: 54px;
+    height: 54px;
+}
+
+.box_hypoglycemia_animation_container {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    margin: 0 auto;
+}
+
+
+.box_complications_sd_animation_container {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-left: 96px;
+}
+
+.box_ssrisks_sd_animation_container {
+    position: relative;
+    width: 5px;
+    height: 5px;
+    margin: 0 auto;
+}
+
+
+.box_one_animation_circle {
+    height: 100%;
+}
+
+.icon_pulse:nth-child(1) {
+    animation: station__pulse 3s 0s infinite ease-out;
+}
+
+.icon_pulse:nth-child(2) {
+    animation: station__pulse 3s 1.5s infinite ease-out;
+}
+
+.icon_pulse:nth-child(3) {
+    animation: station__pulse 3s 3s infinite ease-out;
 }
